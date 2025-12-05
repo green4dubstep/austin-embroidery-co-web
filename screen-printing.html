@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Screen Printing | Austin Embroidery Co</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand">
+        <img src="images/austin+embroidery+co+long.png"
+             alt="Austin Embroidery Co. Logo"
+             class="nav__logo">
+      </a>
+      <nav class="nav__links" aria-label="Main Navigation">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="embroidery.html" class="nav__link">Embroidery</a>
+        <a href="screen-printing.html" class="nav__link">Screen Printing</a>
+        <a href="ourwork.html" class="nav__link">Our Work</a>
+        <a href="index.html#contact" class="nav__cta">Free Quote!</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="page-hero">
+      <div class="page-hero__inner">
+        <p class="page-hero__eyebrow">Bold Prints</p>
+        <h1 class="page-hero__title">Screen Printing</h1>
+        <p class="page-hero__subtitle">
+          Soft hand prints, retail-ready quality, and consistent colors across
+          every run – from small batches to large campaigns.
+        </p>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="page-section__inner">
+        <h2 class="page-section__title">Print Quality That Lasts</h2>
+        <p class="page-section__text">
+          We specialize in high-quality plastisol and water-based inks,
+          carefully matched to your brand colors. Each job is test-printed to
+          ensure clean lines and long-lasting prints that hold up to real-world
+          wear.
+        </p>
+      </div>
+    </section>
+
+    <section class="page-section page-section--alt">
+      <div class="page-section__inner">
+        <h2 class="page-section__title">Shop &amp; Press Views</h2>
+        <p class="page-section__text">
+          Use this gallery to show presses running, stacks of finished tees,
+          and time-lapse or behind-the-scenes videos.
+        </p>
+
+        <div class="media-grid">
+          <div class="media-card media-card--placeholder">
+            Add press / shop photos here
+          </div>
+          <div class="media-card media-card--placeholder">
+            Add finished garments / close-ups here
+          </div>
+          <div class="media-card media-card--placeholder">
+            Embed a printing process video here
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="page-section__inner">
+        <h2 class="page-section__title">Popular Uses</h2>
+        <ul class="page-list">
+          <li>Event tees &amp; tour merch</li>
+          <li>Brand launches &amp; limited drops</li>
+          <li>Uniforms for teams &amp; staff</li>
+          <li>Fundraisers and school spirit wear</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Contact Section -->
+<section class="contact" id="contact">
+  <div class="contact__inner">
+    <h2 class="contact__title">Contact Us!</h2>
+    <div class="contact__info">
+      <div class="contact__item">
+        <div class="contact__label">Email</div>
+        <div class="contact__value">
+          <a href="mailto:sales@austinembroideryco.com" style="color: white;">
+            sales@austinembroideryco.com
+          </a>
+        </div>
+      </div>
+      <div class="contact__item">
+        <div class="contact__label">Phone</div>
+        <div class="contact__value">
+          <a href="tel:+15125229750" style="color: white;">
+            (512) 522-9750
+          </a>
+        </div>
+      </div>
+      <div class="contact__item">
+        <div class="contact__label">Location</div>
+        <div class="contact__value">Austin, TX 78745</div>
+      </div>
+    </div>
+
+    <!-- This button will open the quote popup -->
+    <button class="contact__btn" type="button" id="openQuoteBtn">
+      Request Free Quote
+    </button>
+  </div>
+</section>
+
+<!-- Quote Request Popup -->
+<div class="popup-overlay" id="quote-popup">
+  <div class="popup" role="dialog" aria-modal="true" aria-labelledby="quote-popup-title">
+    <button class="popup__close" type="button" data-popup-close-quote aria-label="Close quote request form">
+      &times;
+    </button>
+
+    <div class="popup__logo">Austin Embroidery Co.</div>
+    <h2 class="popup__title" id="quote-popup-title">Request a Free Quote</h2>
+    <p class="popup__subtitle">Embroidery · Screen Printing · Merch</p>
+
+    <div class="popup__bullets">
+      <span class="popup__bullet">High Quality Apparel</span>
+      <span class="popup__bullet">Low Minimums</span>
+      <span class="popup__bullet">Fast Turnarounds</span>
+    </div>
+
+    <form class="popup__form" id="quote-form">
+      <div class="popup__name-row">
+        <input
+          type="text"
+          class="popup__input"
+          name="firstName"
+          placeholder="First Name"
+          required
+        />
+        <input
+          type="text"
+          class="popup__input"
+          name="lastName"
+          placeholder="Last Name"
+          required
+        />
+      </div>
+
+      <div class="popup__name-row">
+        <input
+          type="email"
+          class="popup__input"
+          name="email"
+          placeholder="Email"
+          required
+        />
+        <input
+          type="tel"
+          class="popup__input"
+          name="phone"
+          placeholder="Phone (optional)"
+        />
+      </div>
+
+      <input
+        type="text"
+        class="popup__input popup__input--full"
+        name="company"
+        placeholder="Company / Organization (optional)"
+      />
+
+      <textarea
+        class="popup__input popup__input--full"
+        name="details"
+        rows="4"
+        placeholder="Tell us about your project: quantities, garments, dates, and any artwork details."
+        style="resize: vertical;"
+        required
+      ></textarea>
+
+      <button type="submit" class="popup__btn">
+        Send Quote Request
+      </button>
+
+      <p class="popup__note">
+        We’ll review your details and follow up by email with pricing and options.
+      </p>
+    </form>
+  </div>
+</div>
+
+
+  <footer>
+    <p>&copy; 2025 Austin Embroidery Co. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

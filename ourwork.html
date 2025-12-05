@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Work | Austin Embroidery Co</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand">
+        <img src="images/austin+embroidery+co+long.png"
+             alt="Austin Embroidery Co. Logo"
+             class="nav__logo">
+      </a>
+      <nav class="nav__links" aria-label="Main Navigation">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="embroidery.html" class="nav__link">Embroidery</a>
+        <a href="screen-printing.html" class="nav__link">Screen Printing</a>
+        <a href="ourwork.html" class="nav__link">Our Work</a>
+        <a href="index.html#contact" class="nav__cta">Free Quote!</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="page-hero">
+      <div class="page-hero__inner">
+        <p class="page-hero__eyebrow">Portfolio</p>
+        <h1 class="page-hero__title">Our Work</h1>
+        <p class="page-hero__subtitle">
+          A look at projects we’ve produced for local businesses, bands,
+          schools, and online brands across Austin and beyond.
+        </p>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="page-section__inner">
+        <h2 class="page-section__title">Featured Projects</h2>
+        <p class="page-section__text">
+          Highlight a few favorite jobs: what the client needed, how you
+          approached the design and production, and the final result.
+        </p>
+
+        <div class="media-grid">
+          <div class="media-card media-card--placeholder">
+            Case Study 1 – logo + photo + short write-up
+          </div>
+          <div class="media-card media-card--placeholder">
+            Case Study 2 – embroidery set or print series
+          </div>
+          <div class="media-card media-card--placeholder">
+            Embedded video testimonial or recap
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section page-section--alt">
+      <div class="page-section__inner">
+        <h2 class="page-section__title">Brands We’ve Helped</h2>
+        <p class="page-section__text">
+          Later you can drop in a simple logo strip, carousel, or grid
+          showcasing client logos to build trust and social proof.
+        </p>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="page-section__inner">
+        <h2 class="page-section__title">Ready to Start a Project?</h2>
+        <p class="page-section__text">
+          Share a few details about your timeline, garment type, and artwork,
+          and we’ll follow up with pricing and options.
+        </p>
+        <button class="contact__btn" type="button" id="openQuoteBtn">
+  Request Free Quote
+</button>
+
+      </div>
+    </section>
+  </main>
+<!-- Quote Request Popup -->
+<div class="popup-overlay" id="quote-popup">
+  <div class="popup" role="dialog" aria-modal="true" aria-labelledby="quote-popup-title">
+    <button class="popup__close" type="button" data-popup-close-quote aria-label="Close quote request form">
+      &times;
+    </button>
+
+    <div class="popup__logo">Austin Embroidery Co.</div>
+    <h2 class="popup__title" id="quote-popup-title">Request a Free Quote</h2>
+    <p class="popup__subtitle">Embroidery · Screen Printing · Merch</p>
+
+    <form class="popup__form" id="quote-form">
+      <div class="popup__name-row">
+        <input type="text" class="popup__input" name="firstName" placeholder="First Name" required />
+        <input type="text" class="popup__input" name="lastName" placeholder="Last Name" required />
+      </div>
+
+      <div class="popup__name-row">
+        <input type="email" class="popup__input" name="email" placeholder="Email" required />
+        <input type="tel" class="popup__input" name="phone" placeholder="Phone (optional)" />
+      </div>
+
+      <input type="text" class="popup__input popup__input--full" name="company" placeholder="Company / Organization (optional)" />
+
+      <textarea class="popup__input popup__input--full" name="details" rows="4"
+                placeholder="Tell us about your project..." required></textarea>
+
+      <button type="submit" class="popup__btn">Send Quote Request</button>
+      <p class="popup__note">We’ll follow up soon with pricing and options!</p>
+    </form>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const quotePopup = document.getElementById("quote-popup");
+    const openQuoteBtn = document.getElementById("openQuoteBtn");
+    const quoteForm = document.getElementById("quote-form");
+    const quoteCloseBtn = quotePopup.querySelector("[data-popup-close-quote]");
+
+    function openQuotePopup() {
+      quotePopup.classList.add("popup-overlay--active");
+    }
+
+    function closeQuotePopup() {
+      quotePopup.classList.remove("popup-overlay--active");
+    }
+
+    openQuoteBtn.addEventListener("click", openQuotePopup);
+    quoteCloseBtn.addEventListener("click", closeQuotePopup);
+
+    quotePopup.addEventListener("click", (e) => {
+      if (e.target === quotePopup) closeQuotePopup();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeQuotePopup();
+    });
+
+    quoteForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Thanks! We’ll contact you soon about your quote.");
+      quoteForm.reset();
+      closeQuotePopup();
+    });
+  });
+</script>
+
+  <footer>
+    <p>&copy; 2025 Austin Embroidery Co. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
