@@ -400,6 +400,18 @@ header.nav {
   text-align: center;
 }
 
+/* Section divider between header/hero and mission */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(to right,
+      transparent,
+      rgba(0, 0, 0, 0.25),
+      transparent);
+  margin: 3rem auto;
+  max-width: 1200px;
+}
+
+
 /* Services Section */
 .services {
   background-color: #f9f9f9;
