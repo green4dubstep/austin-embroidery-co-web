@@ -195,7 +195,7 @@ header.nav {
      3) second image
   */
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
     url("images/classicimage2.PNG"),
     url("images/classicimage1.PNG");
 
@@ -215,7 +215,7 @@ header.nav {
 }
 
 .mission__content {
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(255, 255, 255, 0.55);
   padding: 2rem 2.5rem;
   border-radius: 14px;
   max-width: 900px;
