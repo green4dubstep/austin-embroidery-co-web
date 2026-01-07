@@ -185,8 +185,23 @@ header.nav {
 
 /* Mission Section */
 .mission {
-  background-color: #fff;
   padding: 4rem 2rem;
+  color: #ffffff;
+  position: relative;
+
+  /* Layered backgrounds:
+     1) dark overlay
+     2) first image
+     3) second image
+  */
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("images/classicimage2.PNG"),
+    url("images/classicimage1.PNG");
+
+  background-size: cover, cover, cover;
+  background-position: center, left center, right center;
+  background-repeat: no-repeat;
 }
 
 .mission__wrapper {
@@ -200,21 +215,22 @@ header.nav {
 }
 
 .mission__content {
-  flex: 1 1 55%;
-  text-align: center;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 2rem 2.5rem;
+  border-radius: 14px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
+
 .mission__title {
-  font-size: 2.5rem;
-  color: #333333;
-  margin-bottom: 2rem;
+  color: #ffffff;
 }
 
 .mission__text {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #666666;
+  color: #f0f0f0;
 }
+
 
 /* Image column */
 .mission__image {
