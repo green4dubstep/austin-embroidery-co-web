@@ -241,26 +241,18 @@ header.nav {
   margin-top: 2rem;
 }
 
-.Suppliers_image {
+.Suppliers_image img {
   width: 100%;
   max-width: 700px;
-  /* Change this for size */
+  /* adjust size */
   height: auto;
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
 }
 
-/* Optional hover polish */
 .Suppliers_image img:hover {
   transform: scale(1.02);
-}
-
-/* Mobile size control */
-@media (max-width: 768px) {
-  .Suppliers_image img {
-    max-width: 600px;
-  }
 }
 
 /* Mobile size control */
