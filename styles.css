@@ -607,7 +607,7 @@ footer a:hover {
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #fdfdfd;
+  color: #000000;
   margin-bottom: 0.75rem;
 }
 
@@ -615,12 +615,12 @@ footer a:hover {
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
-  color: #f9f8f8;
+  color: #000000;
 }
 
 .page-hero__subtitle {
   font-size: 1rem;
-  color: #fbf8f8;
+  color: #000000;
 }
 
 /* Sections on inner pages */
