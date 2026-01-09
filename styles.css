@@ -27,8 +27,11 @@ header.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+
+  /* Responsive horizontal padding: small on phones, larger on desktops */
+  padding: 1rem clamp(0.75rem, 3vw, 2rem);
 }
+
 
 .nav__brand {
   display: flex;
@@ -47,9 +50,9 @@ header.nav {
 }
 
 .nav__links {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1rem 1.25rem;
 }
 
 .nav__link {
