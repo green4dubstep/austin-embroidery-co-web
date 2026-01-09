@@ -712,6 +712,40 @@ footer a:hover {
   }
 }
 
+/* ===========================
+   EMBROIDERY – WHAT WE OFFER BACKGROUND
+=========================== */
+.offer-bg {
+  position: relative;
+  color: #ffffff;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("images/embedimg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Keep content readable */
+.offer-bg .page-section__inner {
+  position: relative;
+  z-index: 1;
+
+  background: rgba(0, 0, 0, 0.70);
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  max-width: 900px;
+}
+
+/* Text contrast */
+.offer-bg .page-section__title,
+.offer-bg .page-section__text {
+  color: #ffffff;
+}
+
+
 /* Bullet list */
 .page-list {
   margin-top: 1rem;
