@@ -639,6 +639,7 @@ footer a:hover {
 }
 
 .page-section__title {
+  text-align: center;
   font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #333;
