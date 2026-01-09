@@ -50,9 +50,13 @@ header.nav {
 }
 
 .nav__links {
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+
+  gap: clamp(0.75rem, 2vw, 2rem);
+  /* responsive spacing */
+  white-space: nowrap;
+  /* prevents text collapsing */
 }
 
 .nav__link {
@@ -74,6 +78,7 @@ header.nav {
   text-decoration: none;
   font-weight: 600;
   transition: background-color 0.3s;
+  flex-shrink: 0;
 }
 
 .nav__cta:hover {
